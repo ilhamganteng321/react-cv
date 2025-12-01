@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ExperienceTimeline from "./components/Experiences";
 import Experience from "./components/Experiences";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -22,7 +23,7 @@ function App() {
               <About />
               <Skills />
               <Projects/>
-              <Experience />
+              <ExperienceTimeline />
               <Contact />
             </div>
           </div>

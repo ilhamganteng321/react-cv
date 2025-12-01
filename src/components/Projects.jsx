@@ -5,7 +5,7 @@ const Projects = () => {
     {
       id: 1,
       icon: 'fas fa-wallet',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-blue-500 to-black',
       title: 'Aplikasi Pelacak Keuangan',
       description: 'Pelacak keuangan pribadi yang dibangun dengan React, Tailwind CSS, dan Firebase. Membantu pengguna mengelola pengeluaran, melacak anggaran, dan memvisualisasikan pengeluaran.',
       tags: [
@@ -19,7 +19,7 @@ const Projects = () => {
     {
       id: 2,
       icon: 'fas fa-blog',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-red-800 to-black',
       title: 'Aplikasi Blog Pribadi',
       description: 'Platform blogging modern yang dibangun dengan React, Tailwind CSS, dan Firebase. Mendukung pembuatan, pengeditan, dan pengelolaan posting dengan pembaruan real-time.',
       tags: [
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       id: 3,
       icon: 'fas fa-trophy',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-green-800 to-black',
       title: 'Aplikasi Manajer Turnamen',
       description: 'Aplikasi web untuk mengelola turnamen, dibangun dengan React, Tailwind CSS, dan Firebase. Mendukung pembuatan turnamen, manajemen tim, penjadwalan pertandingan, dan klasemen real-time.',
       tags: [
@@ -47,7 +47,7 @@ const Projects = () => {
     {
       id: 4,
       icon: 'fas fa-chart-line',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-yellow-800 to-black',
       title: 'Dashboard Analitik Produk',
       description: 'Dashboard analitik responsif yang dibangun dengan React dan Tailwind CSS, menampilkan chart interaktif yang didukung Chart.js.',
       tags: [
@@ -62,7 +62,7 @@ const Projects = () => {
     {
       id: 5,
       icon: 'fas fa-cloud-sun',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-yellow-300 to-black',
       title: 'Dashboard Analitik Cuaca',
       description: 'Dashboard cuaca yang elegan dan responsif dibangun dengan React dan Tailwind CSS. Memvisualisasikan data suhu, angin, dan kelembaban real-time.',
       tags: [
@@ -76,7 +76,7 @@ const Projects = () => {
     {
       id: 6,
       icon: 'fas fa-coins',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-purple-500 to-black',
       title: 'Dashboard Analitik Crypto',
       description: 'Dashboard analitik crypto modern yang dibangun dengan React dan Tailwind CSS, menampilkan chart dinamis dan data real-time dari CoinGecko API.',
       tags: [
@@ -91,7 +91,7 @@ const Projects = () => {
     {
       id: 7,
       icon: 'fas fa-quran',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-green-500 to-white',
       title: 'Aplikasi Web Quran',
       description: 'Aplikasi web baca Quran modern yang dibangun dengan Next.js, menampilkan navigasi yang lancar antar surah, dukungan terjemahan, dan tipografi yang elegan.',
       tags: [
@@ -105,7 +105,7 @@ const Projects = () => {
     {
       id: 8,
       icon: 'fas fa-book-open',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-blue-400 to-black',
       title: 'Pembaca Riyadhus Shalihin',
       description: 'Aplikasi web fullstack yang dibangun dengan Next.js dan SQLite untuk membaca, mencari, dan mengeksplorasi hadits dari kitab Riyadhus Shalihin.',
       tags: [
@@ -120,7 +120,7 @@ const Projects = () => {
     {
       id: 9,
       icon: 'fas fa-pen-nib',
-      iconGradient: 'from-gray-800 to-black',
+      iconGradient: 'from-black to-red-300',
       title: 'Aplikasi Catatan',
       description: 'Aplikasi web pencatatan modern dengan integrasi AI untuk meningkatkan, menulis ulang, atau menghasilkan catatan secara cerdas.',
       tags: [
@@ -236,7 +236,7 @@ const Projects = () => {
               
               <div className="relative">
                 {/* Project Icon */}
-                <div className={`w-12 h-12 bg-gradient-to-r ${project.iconGradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-12 h-12 bg-linear-to-r ${project.iconGradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <i className={`${project.icon} text-white text-xl`}></i>
                 </div>
 
@@ -270,7 +270,7 @@ const Projects = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 text-center bg-gradient-to-r from-gray-900 to-black text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-900"
+                      className="flex-1 text-center bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-300"
                     >
                       Kunjungi
                     </a>
