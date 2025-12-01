@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Experience from "./components/Experiences";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <div className="px-6 md:px-8 py-12 md:py-16">
               <About />
               <Skills />
+              <Projects/>
               <Experience />
               <Contact />
             </div>

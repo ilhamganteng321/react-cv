@@ -20,7 +20,7 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="section-box">
+    <section id="experience" className="section-box mt-4">
       <h2 className="section-title">Pengalaman</h2>
       <div className="max-w-4xl mx-auto flex flex-col gap-6">
         {experiences.map((exp, index) => (
