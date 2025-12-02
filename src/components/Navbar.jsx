@@ -11,6 +11,7 @@ const Navbar = () => {
     { href: '#skills', label: 'Keahlian' },
     { href: '#projects', label: 'Proyek' },
     { href: '#experience', label: 'Pengalaman' },
+    { href: '#services', label: 'Layanan' },
     { href: '#contact', label: 'Kontak' }
   ]
 
@@ -19,7 +20,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50)
 
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact']
+      const sections = ['home', 'about', 'skills', 'projects', 'experience','services' ,'contact']
       const current = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {

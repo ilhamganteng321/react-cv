@@ -5,6 +5,7 @@ import Experience from "./components/Experiences";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import ServicesSection from "./components/Service";
 import Skills from "./components/Skills";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Skills />
               <Projects/>
               <ExperienceTimeline />
+              <ServicesSection/>
               <Contact />
             </div>
           </div>
