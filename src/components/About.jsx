@@ -1,61 +1,7 @@
 import React from 'react'
 import Lottie from 'lottie-react'
+import programmerAnim from "../assets/animations/programmer.json";
 
-// Import Lottie JSON file (pastikan file JSON sudah ada di folder public atau src)
-// Jika Lottie JSON ada di public folder:
-// const defaultAnimation = '../assets/animations/Programmer.json';
-
-// Fallback animation data (jika file tidak ditemukan)
-// const fallbackAnimation = {
-//   v: "5.5.9",
-//   fr: 60,
-//   ip: 0,
-//   op: 180,
-//   w: 500,
-//   h: 500,
-//   nm: "About Animation",
-//   ddd: 0,
-//   assets: [],
-//   layers: [
-//     {
-//       ddd: 0,
-//       ind: 1,
-//       ty: 4,
-//       nm: "Circle Container",
-//       sr: 1,
-//       ks: {
-//         o: { a: 0, k: 100 },
-//         r: { a: 0, k: 0 },
-//         p: { a: 0, k: [250, 250, 0] },
-//         a: { a: 0, k: [0, 0, 0] },
-//         s: { a: 0, k: [100, 100, 100] }
-//       },
-//       shapes: [
-//         {
-//           ty: "gr",
-//           it: [
-//             {
-//               ty: "el",
-//               p: { a: 0, k: [0, 0] },
-//               s: { a: 0, k: [200, 200] }
-//             },
-//             {
-//               ty: "fl",
-//               c: { a: 0, k: [0.067, 0.267, 0.478, 1] }
-//             },
-//             {
-//               ty: "tr",
-//               p: { a: 0, k: [0, 0] },
-//               a: { a: 0, k: [0, 0] },
-//               s: { a: 0, k: [100, 100] },
-//               r: { a: 0, k: 0 }
-//             }
-//           ]
-//         }
-//       ]
-//     }
-//   ]
-// }
 
 const About = () => {
   return (
@@ -71,7 +17,7 @@ const About = () => {
               {/* Lottie Animation */}
               <div className="w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden">
                 <Lottie
-                  path='../../public/animations/Programmer.json'
+                  animationData={programmerAnim}
                   loop={true}
                   autoplay={true}
                   className="w-full h-full"
