@@ -1,9 +1,7 @@
-import React from 'react'
 import Lottie from 'lottie-react'
-import programmerAnim from "../assets/animations/programmer.json";
+import programmerAnim from "../assets/animations/Programmer.json";
 
-
-const About = () => {
+const About = () => {  
   return (
     <section id="about" className="section-box">
       <h2 className="section-title">Tentang Saya</h2>
