@@ -14,6 +14,11 @@ const ApiShowcase = () => {
     },
     {
       id: 2,
+      name: "Sales Api",
+      url: "https://api-sales.ngacir.my.id/api/sales",
+    },
+    {
+      id: 2,
       name: "Weather API",
       url: "https://api.open-meteo.com/v1/forecast?latitude=0&longitude=109&current_weather=true",
     },
