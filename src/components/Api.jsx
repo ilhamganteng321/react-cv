@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const ApiShowcase = () => {
   const [activeService, setActiveService] = useState(null);
   const [jsonData, setJsonData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const preRef = useRef(null);
 
   const services = [
     {
@@ -34,6 +35,13 @@ const ApiShowcase = () => {
       setLoading(false);
     }
   };
+
+  // Scroll ke atas ketika data baru dimuat
+  useEffect(() => {
+    if (jsonData && preRef.current) {
+      preRef.current.scrollTop = 0;
+    }
+  }, [jsonData]);
 
   return (
     <section className="min-h-screen bg-white py-8 px-4 md:py-20 md:px-4 section-box mt-5">
@@ -70,32 +78,80 @@ const ApiShowcase = () => {
           ))}
         </div>
 
-        {/* Output JSON */}
-        <div className="bg-gray-50 border rounded-xl p-4 md:p-6 min-h-[150px] md:min-h-[200px]">
-          {loading && (
-            <div className="flex items-center justify-center h-full">
-              <div className="text-center">
-                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mb-2"></div>
-                <p className="text-gray-500">Mengambil data...</p>
+        {/* Output JSON dengan fixed height dan scroll */}
+        <div className="relative">
+          <div className="flex justify-between items-center mb-2 px-1">
+            <span className="text-sm text-gray-600 font-medium">
+              Response JSON
+            </span>
+            {jsonData && !loading && (
+              <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                {Object.keys(jsonData).length} properti
+              </span>
+            )}
+          </div>
+          
+          <div className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
+            <div 
+              ref={preRef}
+              className="h-[400px] md:h-[500px] overflow-auto p-4 md:p-6"
+            >
+              {loading && (
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mb-2"></div>
+                    <p className="text-gray-500">Mengambil data...</p>
+                  </div>
+                </div>
+              )}
+
+              {!loading && jsonData && (
+                <pre className="text-xs md:text-sm text-gray-800 font-mono leading-relaxed">
+                  {JSON.stringify(jsonData, null, 2)}
+                </pre>
+              )}
+
+              {!loading && !jsonData && (
+                <div className="flex flex-col items-center justify-center h-full text-center p-4">
+                  <div className="text-gray-300 mb-3">
+                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-400 text-sm md:text-base">
+                    Klik salah satu layanan di atas untuk melihat data JSON
+                  </p>
+                  <p className="text-gray-300 text-xs mt-1">
+                    Response akan ditampilkan di area ini
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Scroll indicator (opsional) */}
+            {jsonData && !loading && (
+              <div className="border-t border-gray-200 bg-gray-100 px-4 py-2 flex justify-between items-center">
+                <div className="text-xs text-gray-500">
+                  Scroll untuk melihat lebih banyak
+                </div>
+                <div className="flex space-x-1">
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
+        </div>
 
-          {!loading && jsonData && (
-            <div className="overflow-hidden">
-              <pre className="text-xs md:text-sm text-gray-800 overflow-x-auto whitespace-pre-wrap break-words">
-                {JSON.stringify(jsonData, null, 2)}
-              </pre>
-            </div>
-          )}
-
-          {!loading && !jsonData && (
-            <div className="flex items-center justify-center h-full">
-              <p className="text-gray-400 text-center text-sm md:text-base px-2">
-                Klik salah satu layanan untuk melihat data JSON
-              </p>
-            </div>
-          )}
+        {/* Petunjuk penggunaan */}
+        <div className="mt-4 flex flex-wrap gap-2 justify-center">
+          <div className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg">
+            <span className="font-medium">Tip:</span> Gunakan scroll untuk navigasi response yang panjang
+          </div>
+          <div className="text-xs text-gray-500 bg-gray-50 px-3 py-1.5 rounded-lg">
+            <span className="font-medium">Ctrl+F</span> untuk mencari dalam JSON
+          </div>
         </div>
       </div>
     </section>
