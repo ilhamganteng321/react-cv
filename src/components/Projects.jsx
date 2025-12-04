@@ -1,4 +1,5 @@
 import React from 'react'
+import ApiShowcase from './Api'
 
 const Projects = () => {
   const projects = [
@@ -307,6 +308,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      <ApiShowcase/>
 
       {/* Custom Animation */}
       <style jsx>{`
