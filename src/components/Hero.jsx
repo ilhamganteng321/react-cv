@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import profileImage from "../assets/profile.jpg";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -107,8 +108,12 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-purple-600 rounded-full blur-xl opacity-20 animate-pulse"></div>
 
               {/* Main Avatar */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center text-6xl md:text-7xl shadow-2xl shadow-primary-500/40 border-4 border-white/90 transform hover:scale-105 transition-transform duration-300">
-                👤
+              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl shadow-primary-500/40 border-4 border-white/90 transform hover:scale-105 transition-transform duration-300">
+                <img
+                  src={profileImage} // ✅ path dari folder public
+                  alt="Ilham Arip"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating Elements */}

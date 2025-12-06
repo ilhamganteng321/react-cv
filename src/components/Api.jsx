@@ -60,7 +60,7 @@ const ApiShowcase = () => {
             Klik layanan untuk melihat response JSON secara langsung
           </p>
 <p className="text-gray-500 text-sm md:text-base mt-2 px-2">
-            Klik Ulang kembali jika terjadi error
+            Ulangi kembali jika terjadi error
           </p>
           <div className="w-16 md:w-24 h-1 bg-gray-900 mx-auto mt-3 md:mt-4 rounded-full"></div>
         </div>

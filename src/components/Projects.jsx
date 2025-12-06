@@ -1,5 +1,6 @@
 import React from 'react'
 import ApiShowcase from './Api'
+import Dokumentasi from './Docs'
 
 const Projects = () => {
   const projects = [
@@ -217,7 +218,7 @@ const Projects = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Proyek Saya
+            Fitur Proyek Saya
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
             Koleksi proyek yang telah saya kembangkan dengan berbagai teknologi modern
@@ -309,6 +310,7 @@ const Projects = () => {
         </div>
       </div>
       <ApiShowcase/>
+      <Dokumentasi/>
 
       {/* Custom Animation */}
       <style jsx>{`
