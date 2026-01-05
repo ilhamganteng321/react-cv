@@ -4,8 +4,23 @@ import Dokumentasi from './Docs'
 
 const Projects = () => {
   const projects = [
+{
+  "id": 1,
+  "icon": "fas fa-film",
+  "iconGradient": "from-red-500 to-purple-600",
+  "title": "HamCinema",
+  "description": "Platform streaming film dan serial TV modern dengan koleksi lengkap dari TMDB API. Fitur discover, trending content, watchlist personal, dan pencarian real-time untuk pengalaman menonton terbaik.",
+  "tags": [
+    { "name": "React", "color": "bg-blue-500/10 text-blue-400 border border-blue-500/20" },
+    { "name": "Tailwind CSS", "color": "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20" },
+    { "name": "TMDB API", "color": "bg-purple-500/10 text-purple-400 border border-purple-500/20" },
+    { "name": "Framer Motion", "color": "bg-pink-500/10 text-pink-400 border border-pink-500/20" }
+  ],
+  "liveUrl": "https://movie.ngacir.my.id",
+  "githubUrl": "https://github.com/ilhamganteng321/movie-TMDB"
+},
     {
-      id: 1,
+      id: 2,
       icon: 'fas fa-wallet',
       iconGradient: 'from-blue-500 to-black',
       title: 'Aplikasi Pelacak Keuangan',
@@ -19,7 +34,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/finance_tracker'
     },
     {
-      id: 2,
+      id: 3,
       icon: 'fas fa-blog',
       iconGradient: 'from-red-800 to-black',
       title: 'Aplikasi Blog Pribadi',
@@ -33,7 +48,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/blog_app'
     },
     {
-      id: 3,
+      id: 4,
       icon: 'fas fa-trophy',
       iconGradient: 'from-green-800 to-black',
       title: 'Aplikasi Manajer Turnamen',
@@ -47,7 +62,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/tourneyku'
     },
     {
-      id: 4,
+      id: 5,
       icon: 'fas fa-chart-line',
       iconGradient: 'from-yellow-800 to-black',
       title: 'Dashboard Analitik Produk',
@@ -62,7 +77,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/product-analistyc'
     },
     {
-      id: 5,
+      id: 6,
       icon: 'fas fa-cloud-sun',
       iconGradient: 'from-yellow-300 to-black',
       title: 'Dashboard Analitik Cuaca',
@@ -76,7 +91,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/weather_app'
     },
     {
-      id: 6,
+      id: 7,
       icon: 'fas fa-coins',
       iconGradient: 'from-purple-500 to-black',
       title: 'Dashboard Analitik Crypto',
@@ -91,7 +106,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/crypto-dashboard'
     },
     {
-      id: 7,
+      id: 8,
       icon: 'fas fa-quran',
       iconGradient: 'from-green-500 to-white',
       title: 'Aplikasi Web Quran',
@@ -105,7 +120,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/quran_web_app'
     },
     {
-      id: 8,
+      id: 9,
       icon: 'fas fa-book-open',
       iconGradient: 'from-blue-400 to-black',
       title: 'Pembaca Riyadhus Shalihin',
@@ -120,7 +135,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/Riyadhus-shalihin'
     },
     {
-      id: 9,
+      id: 10,
       icon: 'fas fa-pen-nib',
       iconGradient: 'from-black to-red-300',
       title: 'Aplikasi Catatan',
@@ -135,7 +150,7 @@ const Projects = () => {
       githubUrl: null
     },
     {
-      id: 10,
+      id: 11,
       icon: 'fas fa-mobile-alt',
       iconGradient: 'from-gray-800 to-black',
       title: 'Aplikasi Flutter CRUD',
@@ -148,7 +163,7 @@ const Projects = () => {
       githubUrl: null
     },
     {
-      id: 11,
+      id: 12,
       icon: 'fas fa-heartbeat',
       iconGradient: 'from-gray-800 to-black',
       title: 'Aplikasi Prediksi Diabetes',
@@ -162,7 +177,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/ilhamganteng321/project-2'
     },
     {
-      id: 12,
+      id: 13,
       icon: 'fas fa-robot',
       iconGradient: 'from-gray-800 to-black',
       title: 'Chatbot Edukasi',
@@ -176,7 +191,7 @@ const Projects = () => {
       githubUrl: null
     },
     {
-      id: 13,
+      id: 14,
       icon: 'fas fa-network-wired',
       iconGradient: 'from-gray-800 to-black',
       title: 'Sistem gRPC',
@@ -190,7 +205,7 @@ const Projects = () => {
       githubUrl: null
     },
     {
-      id: 14,
+      id: 15,
       icon: 'fas fa-briefcase',
       iconGradient: 'from-gray-800 to-black',
       title: 'Website Portfolio',
