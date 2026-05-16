@@ -5,12 +5,16 @@ import ProjectCard from "./project-card";
 import { projects } from "../types/project";
 
 const Work: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<
-    "all" | "web" | "mobile" | "desktop" | "design"
-  >("all");
+  type TabType = "all" | "web" | "mobile" | "desktop" | "design";
+  const [activeTab, setActiveTab] = useState<TabType>("all");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const tabs = [
+  const tabs: {
+    id: TabType;
+    label: string;
+    icon: string;
+    count: number;
+  }[] = [
     {
       id: "all",
       label: "All Projects",
@@ -123,7 +127,7 @@ const Work: React.FC = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id)}
                 className={`group flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-sm transition-all duration-300 ${
                   activeTab === tab.id
                     ? "bg-indigo-500 text-white shadow-lg shadow-indigo-500/25"
