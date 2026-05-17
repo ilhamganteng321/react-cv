@@ -48,7 +48,7 @@ export const projects: Project[] = [
         color: "bg-sky-500/10 text-sky-400 border border-sky-500/20",
       },
     ],
-    liveUrl: "",
+    liveUrl: "https://d-post.ngacir.my.id",
     githubUrl: "https://github.com/ilhamganteng321/electron-pos",
   },
   {
