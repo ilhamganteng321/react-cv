@@ -1,12 +1,35 @@
 // components/Hero.tsx
 import React from "react";
 import RevealOnScroll from "./reveal-on-scroll";
-import FloatingCards from "./flating-cards";
 
 const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen pt-20 relative">
       <div className="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[90vh]">
+        {/* Profile Image — Mobile Only (tampil di atas teks) */}
+        <div className="flex justify-center lg:hidden">
+          <div className="relative group">
+            {/* Glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+
+            {/* Profile Image */}
+            <div className="relative w-40 h-40 rounded-full overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
+              <img
+                src="/images/r-profile.png"
+                alt="Profile"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute bottom-2 -right-6 px-3 py-1.5 rounded-full bg-black/60 border border-white/10 backdrop-blur-md">
+              <p className="text-[10px] font-mono text-white whitespace-nowrap">
+                AVAILABLE FOR WORK
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Left Content */}
         <div className="lg:col-span-8 z-10">
           <RevealOnScroll>
@@ -56,7 +79,7 @@ const Hero: React.FC = () => {
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.3}>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 my-10">
               <a
                 href="#work"
                 className="bg-white/5 backdrop-blur-sm border border-white/10 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2 group"
@@ -64,17 +87,34 @@ const Hero: React.FC = () => {
                 Explore Archive
                 <i className="ph ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
               </a>
-              {/* <button className="px-8 py-4 rounded-full font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-2 border border-transparent hover:border-gray-700">
-                <i className="ph ph-download-simple"></i>
-                Get Manifesto PDF
-              </button> */}
             </div>
           </RevealOnScroll>
         </div>
 
-        {/* Right Content */}
+        {/* Right Content — Desktop Only */}
         <div className="lg:col-span-4 relative hidden lg:block">
-          <FloatingCards />
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative group">
+              {/* Glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+
+              {/* Profile Image */}
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
+                <img
+                  src="/images/r-profile.png"
+                  alt="Profile"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute bottom-5 -right-5 px-4 py-2 rounded-full bg-black/60 border border-white/10 backdrop-blur-md">
+                <p className="text-xs font-mono text-white">
+                  AVAILABLE FOR WORK
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

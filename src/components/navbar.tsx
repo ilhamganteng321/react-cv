@@ -31,9 +31,12 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-display font-bold tracking-tight flex items-center gap-2 cursor-pointer group">
           <span className="w-2 h-2 rounded-full bg-indigo-500 group-hover:scale-150 transition-transform"></span>
-          <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          <a
+            href="#home"
+            className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
+          >
             Ilham Arip
-          </span>
+          </a>
         </div>
 
         {/* Desktop Menu */}

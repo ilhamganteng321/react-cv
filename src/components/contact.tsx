@@ -174,30 +174,6 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Right Profile */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative group">
-                {/* Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-
-                {/* Profile Image */}
-                <div className="relative w-64 h-64 rounded-full overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
-                  <img
-                    src="/images/r-profile.png"
-                    alt="Profile"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                {/* Floating Badge */}
-                <div className="absolute bottom-5 -right-5 px-4 py-2 rounded-full bg-black/60 border border-white/10 backdrop-blur-md">
-                  <p className="text-xs font-mono text-white">
-                    AVAILABLE FOR WORK
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </RevealOnScroll>
 
