@@ -18,6 +18,43 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+{
+    icon: "fas fa-store",
+    iconGradient: "from-orange-500 to-red-600",
+    title: "Neermala Affiliate Store",
+    type: "web",
+    photoUrl: "/images/e-shop.png",
+    description:
+        "Modern affiliate ecommerce web application built with Next.js and Tailwind CSS, featuring dynamic product management using Google Sheets API, responsive shopping cart system, animated product carousel, realtime cart updates with localStorage, and clean minimalist shopping experience inspired by modern ecommerce platforms.",
+    tags: [
+        {
+            name: "Next.js",
+            color: "bg-black/10 text-black border border-black/20",
+        },
+        {
+            name: "TypeScript",
+            color: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
+        },
+        {
+            name: "Tailwind CSS",
+            color: "bg-sky-500/10 text-sky-400 border border-sky-500/20",
+        },
+        {
+            name: "Google Sheets API",
+            color: "bg-green-500/10 text-green-400 border border-green-500/20",
+        },
+        {
+            name: "Shopee Affiliate",
+            color: "bg-orange-500/10 text-orange-400 border border-orange-500/20",
+        },
+        {
+            name: "Responsive UI",
+            color: "bg-purple-500/10 text-purple-400 border border-purple-500/20",
+        },
+    ],
+    liveUrl: "https://e-shop.ngacir.my.id",
+    githubUrl: "https://github.com/ilhamganteng321/e-shop",
+},
   {
     icon: "fas fa-cash-register",
     iconGradient: "from-blue-500 to-indigo-700",
