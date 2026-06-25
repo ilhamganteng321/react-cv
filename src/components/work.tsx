@@ -155,14 +155,26 @@ const Work: React.FC = () => {
           {/* Scroll Buttons */}
           <button
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-indigo-500 hover:border-indigo-500 transition-all opacity-0 group-hover:opacity-100 -translate-x-5 group-hover:translate-x-0 duration-300"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20
+w-10 h-10 rounded-full bg-black/50 backdrop-blur-md
+border border-white/10 flex items-center justify-center
+hover:bg-indigo-500 hover:border-indigo-500 transition-all
+opacity-100 md:opacity-0 md:group-hover:opacity-100
+translate-x-0 md:-translate-x-5 md:group-hover:translate-x-0
+duration-300"
           >
             <i className="ph ph-caret-left text-xl"></i>
           </button>
 
           <button
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-indigo-500 hover:border-indigo-500 transition-all opacity-0 group-hover:opacity-100 translate-x-5 group-hover:translate-x-0 duration-300"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20
+w-10 h-10 rounded-full bg-black/50 backdrop-blur-md
+border border-white/10 flex items-center justify-center
+hover:bg-indigo-500 hover:border-indigo-500 transition-all
+opacity-100 md:opacity-0 md:group-hover:opacity-100
+translate-x-0 md:translate-x-5 md:group-hover:translate-x-0
+duration-300"
           >
             <i className="ph ph-caret-right text-xl"></i>
           </button>
