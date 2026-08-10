@@ -1,5 +1,5 @@
-// App.tsx
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import Spotlight from "./components/spotlight";
 import BackgroundShapes from "./components/background-shapes";
 import Navbar from "./components/navbar";
@@ -7,8 +7,14 @@ import Hero from "./components/hero";
 import About from "./components/about";
 import Work from "./components/work";
 import Contact from "./components/contact";
+import ProjectDetail, {
+  type ProjectDetailData,
+} from "./components/project-detail";
 
 function App() {
+  const [selectedProject, setSelectedProject] =
+    useState<ProjectDetailData | null>(null);
+
   useEffect(() => {
     const anchors =
       document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
@@ -45,12 +51,47 @@ function App() {
       <Spotlight />
       <BackgroundShapes />
       <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Work />
-        <Contact />
-      </main>
+
+      {selectedProject ? (
+        // ====================================
+        // PROJECT DETAIL
+        // ====================================
+        <ProjectDetail
+          project={selectedProject}
+          onBack={() => {
+            setSelectedProject(null);
+
+            // Kembali ke section Projects
+            setTimeout(() => {
+              document.getElementById("projects")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }, 50);
+          }}
+        />
+      ) : (
+        // ====================================
+        // MAIN PORTFOLIO
+        // ====================================
+        <main>
+          <Hero />
+          <About />
+
+          <Work
+            onViewProject={(project) => {
+              setSelectedProject(project);
+
+              // Scroll ke paling atas
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+          />
+
+          <Contact />
+        </main>
+      )}
     </div>
   );
 }

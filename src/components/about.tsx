@@ -47,34 +47,32 @@ const About: React.FC = () => {
     <section id="about" className="py-24 bg-[#0a0a0a] px-5 relative">
       <div className="max-w-7xl mx-auto w-full px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-6">
-          <RevealOnScroll>
-            <>
-              <p className="font-mono text-pink-500 text-sm tracking-widest mb-2">
-                02 // THE PERSONA
-              </p>
-              <h2 className="font-display text-5xl md:text-4.5xl font-semibold">
-                Architecting
-                <br />
-                Digital{" "}
-                <span className="italic text-gray-400">Experiences</span>
-              </h2>
-            </>
-          </RevealOnScroll>
-          <p className="text-gray-500 font-mono text-sm max-w-xs text-right mt-6 md:mt-0">
-            A blend of technical precision and creative vision, shaping the web
-            of tomorrow.
-          </p>
-        </div>
+
+        <RevealOnScroll>
+          <div className="mb-10 sm:mb-12 md:mb-16">
+            <p className="mb-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-indigo-400">
+              About / Expertise
+            </p>
+
+            <h2 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[0.95] tracking-tight text-white">
+              Architecting{" "}
+              <span className="text-gray-500">Digital Experiences.</span>
+            </h2>
+
+            <div className="mt-5 h-px w-16 bg-indigo-500 sm:w-24" />
+          </div>
+        </RevealOnScroll>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          {/* Left Column */}
-          <div className="md:col-span-5 flex flex-col gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-12 md:gap-12">
+          {/* ==========================================
+      LEFT COLUMN
+  ========================================== */}
+          <div className="flex flex-col gap-7 sm:gap-8 md:col-span-5">
             <RevealOnScroll delay={0.1}>
-              <p className="text-xl text-gray-300 leading-relaxed font-light">
+              <p className="text-lg sm:text-xl leading-relaxed font-light text-gray-300">
                 I build{" "}
-                <span className="text-white font-medium">
+                <span className="font-medium text-white">
                   modern digital experiences
                 </span>{" "}
                 that combine performance, scalability, and clean visual design.
@@ -84,12 +82,12 @@ const About: React.FC = () => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.15}>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-sm sm:text-base leading-7 text-gray-400">
                 As a Fullstack Web & Mobile Developer, I work with{" "}
-                <span className="text-white">React</span>,{" "}
-                <span className="text-white">Node.js</span>,{" "}
-                <span className="text-white">Next</span>, and{" "}
-                <span className="text-white">Electron</span> to craft
+                <span className="text-gray-200">React</span>,{" "}
+                <span className="text-gray-200">Node.js</span>,{" "}
+                <span className="text-gray-200">Next</span>, and{" "}
+                <span className="text-gray-200">Electron</span> to craft
                 high-quality applications from backend architecture to modern
                 frontend interfaces. I enjoy transforming ideas into fast,
                 responsive, and visually engaging products.
@@ -97,10 +95,11 @@ const About: React.FC = () => {
             </RevealOnScroll>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center group">
-                <div className="relative w-20 h-20 mx-auto mb-4">
-                  <svg className="w-full h-full transform -rotate-90">
+            <div className="mt-2 grid grid-cols-2 gap-3 sm:gap-5 md:mt-4">
+              {/* Frontend */}
+              <div className="rounded-xl sm:rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-6 text-center transition-colors hover:bg-white/[0.06]">
+                <div className="relative mx-auto mb-3 h-16 w-16 sm:mb-4 sm:h-20 sm:w-20">
+                  <svg className="h-full w-full -rotate-90">
                     <circle
                       cx="50"
                       cy="50"
@@ -109,6 +108,7 @@ const About: React.FC = () => {
                       stroke="rgba(255,255,255,0.1)"
                       strokeWidth="4"
                     />
+
                     <circle
                       cx="50"
                       cy="50"
@@ -118,22 +118,27 @@ const About: React.FC = () => {
                       strokeWidth="4"
                       strokeDasharray="283"
                       strokeDashoffset="28"
+                      strokeLinecap="round"
                     />
                   </svg>
-                  <span className="absolute inset-0 flex items-center justify-center text-xl font-bold font-display">
-                    87<span className="text-sm text-gray-400">%</span>
+
+                  <span className="absolute inset-0 flex items-center justify-center text-lg sm:text-xl font-bold font-display">
+                    87
+                    <span className="text-xs sm:text-sm text-gray-400">%</span>
                   </span>
                 </div>
-                <span className="font-mono text-xs tracking-wider text-gray-400">
+
+                <span className="font-mono text-[9px] sm:text-xs tracking-wider text-gray-400">
                   FRONTEND
                   <br />
                   LOGIC
                 </span>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center group">
-                <div className="relative w-20 h-20 mx-auto mb-4">
-                  <svg className="w-full h-full transform -rotate-90">
+              {/* Backend */}
+              <div className="rounded-xl sm:rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-6 text-center transition-colors hover:bg-white/[0.06]">
+                <div className="relative mx-auto mb-3 h-16 w-16 sm:mb-4 sm:h-20 sm:w-20">
+                  <svg className="h-full w-full -rotate-90">
                     <circle
                       cx="50"
                       cy="50"
@@ -142,6 +147,7 @@ const About: React.FC = () => {
                       stroke="rgba(255,255,255,0.1)"
                       strokeWidth="4"
                     />
+
                     <circle
                       cx="50"
                       cy="50"
@@ -151,13 +157,17 @@ const About: React.FC = () => {
                       strokeWidth="4"
                       strokeDasharray="283"
                       strokeDashoffset="42"
+                      strokeLinecap="round"
                     />
                   </svg>
-                  <span className="absolute inset-0 flex items-center justify-center text-xl font-bold font-display">
-                    90<span className="text-sm text-gray-400">%</span>
+
+                  <span className="absolute inset-0 flex items-center justify-center text-lg sm:text-xl font-bold font-display">
+                    90
+                    <span className="text-xs sm:text-sm text-gray-400">%</span>
                   </span>
                 </div>
-                <span className="font-mono text-xs tracking-wider text-gray-400">
+
+                <span className="font-mono text-[9px] sm:text-xs tracking-wider text-gray-400">
                   BACKEND
                   <br />
                   ARCH
@@ -166,15 +176,18 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="md:col-span-7 flex flex-col gap-12">
+          {/* ==========================================
+      RIGHT COLUMN
+  ========================================== */}
+          <div className="flex flex-col gap-10 sm:gap-12 md:col-span-7">
             {/* Tech Stack */}
             <RevealOnScroll delay={0.2}>
               <div>
-                <h3 className="font-mono text-sm text-gray-400 mb-6 uppercase tracking-widest border-b border-white/5 pb-2">
+                <h3 className="mb-5 border-b border-white/5 pb-2 font-mono text-[10px] sm:text-xs text-gray-400 uppercase tracking-[0.2em]">
                   Core Arsenal
                 </h3>
-                <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 sm:gap-4">
                   {skills.map((skill, idx) => (
                     <SkillBadge key={idx} {...skill} />
                   ))}
@@ -185,10 +198,11 @@ const About: React.FC = () => {
             {/* Timeline */}
             <RevealOnScroll delay={0.25}>
               <div>
-                <h3 className="font-mono text-sm text-gray-400 mb-6 uppercase tracking-widest border-b border-white/5 pb-2">
+                <h3 className="mb-5 border-b border-white/5 pb-2 font-mono text-[10px] sm:text-xs text-gray-400 uppercase tracking-[0.2em]">
                   Chronology
                 </h3>
-                <div className="relative border-l border-gray-800 ml-3 flex flex-col gap-8">
+
+                <div className="relative ml-2 sm:ml-3 flex flex-col gap-7 border-l border-gray-800 pl-5 sm:gap-8 sm:pl-6">
                   {timeline.map((item, idx) => (
                     <TimelineItem key={idx} {...item} />
                   ))}

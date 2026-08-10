@@ -13,6 +13,7 @@ interface ProjectCardProps {
   liveUrl: string | null;
   githubUrl: string | null;
   features?: string[];
+  onView: () => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -26,9 +27,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   liveUrl,
   githubUrl,
   features,
+  onView,
 }) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-[#0f0f0f] border border-white/5 hover:border-white/20 transition-all duration-500 h-full flex flex-col">
+    <div
+      onClick={onView}
+      className="group relative overflow-hidden rounded-2xl bg-[#0f0f0f] border border-white/5 hover:border-white/20 transition-all duration-500 h-full flex flex-col"
+    >
       {/* Image/Icon Section */}
       <div className="aspect-[4/3] bg-gradient-to-br from-gray-900 to-black relative overflow-hidden flex items-center justify-center p-8">
         {photoUrl ? (
@@ -53,38 +58,45 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Content */}
       <div className="p-6 relative flex-1 flex flex-col">
         <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-
-        <div className="flex justify-between items-start mb-3">
-          <div>
+        <div className="flex items-start justify-between gap-3 mb-3">
+          {/* Title */}
+          <div className="min-w-0 flex-1">
             <p className="font-mono text-xs text-indigo-500 mb-1 uppercase tracking-wider">
               {category}
             </p>
+
             <h3 className="text-xl font-display font-semibold">{title}</h3>
           </div>
-          <div className="flex gap-2">
+
+          {/* Actions */}
+          <div className="flex flex-col gap-2 shrink-0">
             {githubUrl && (
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-medium text-white hover:bg-white hover:text-black transition-colors"
               >
-                <i className="ph ph-github-logo text-sm"></i>
+                <i className="ph ph-github-logo text-sm" />
+                <span>GitHub</span>
               </a>
             )}
+
             {liveUrl && (
               <a
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-medium text-white hover:bg-white hover:text-black transition-colors"
               >
-                <i className="ph ph-arrow-up-right text-sm"></i>
+                <i className="ph ph-arrow-up-right text-sm" />
+                <span>Live Demo</span>
               </a>
             )}
           </div>
         </div>
-
         <p className="text-gray-400 text-sm mb-4 line-clamp-3">{description}</p>
 
         {/* Features preview */}

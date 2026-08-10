@@ -3,8 +3,13 @@ import React, { useState, useRef } from "react";
 import RevealOnScroll from "./reveal-on-scroll";
 import ProjectCard from "./project-card";
 import { projects } from "../types/project";
+import type { ProjectDetailData } from "./project-detail";
 
-const Work: React.FC = () => {
+interface WorkProps {
+  onViewProject: (project: ProjectDetailData) => void;
+}
+
+const Work: React.FC<WorkProps> = ({ onViewProject }) => {
   type TabType = "all" | "web" | "mobile" | "desktop" | "design";
   const [activeTab, setActiveTab] = useState<TabType>("all");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -216,6 +221,7 @@ duration-300"
                     liveUrl={project.liveUrl}
                     githubUrl={project.githubUrl}
                     features={project.features}
+                    onView={() => onViewProject(project)}
                   />
                 </RevealOnScroll>
               </div>
