@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         <div className="lg:col-span-8 z-10">
           <RevealOnScroll>
             <p className="font-mono text-indigo-500 tracking-widest text-sm uppercase">
-              Web & Mobile developer
+              01 // Web & Mobile developer
             </p>
           </RevealOnScroll>
 

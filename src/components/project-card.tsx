@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <img
             src={photoUrl}
             alt={title}
-            className="w-full h-full object-cover rounded-lg opacity-80 group-hover:opacity-100 transition-opacity"
+            className="w-full h-full object-contain rounded-lg opacity-80 group-hover:opacity-100 transition-opacity"
             loading="lazy"
           />
         ) : (

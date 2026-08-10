@@ -15,46 +15,140 @@ export interface Project {
   tags: ProjectTag[];
   liveUrl: string | null;
   githubUrl: string | null;
+  docs?: {
+    problem?: string;
+    goal?: string;
+    solution?: string;
+
+    screenshots?: {
+      image: string;
+      title?: string;
+      description?: string;
+    }[];
+
+    challenges?: string[];
+    result?: string;
+  };
 }
 
 export const projects: Project[] = [
-{
+  {
+    icon: "fas fa-book-quran",
+    iconGradient: "from-emerald-500 to-teal-600",
+    title: "Al-Quran Reader",
+    type: "mobile",
+    photoUrl: "/images/quran.jpeg",
+    description:
+      "Modern Al-Quran reading mobile application built with React Native and Expo, featuring a clean and focused reading experience with Surah navigation, Arabic Quran text using the Amiri font, verse reading interface, bookmark functionality, and intuitive tab-based navigation. Designed with a minimalist interface to make reading and navigating the Quran comfortable on mobile devices.",
+    tags: [
+      {
+        name: "React Native",
+        color: "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20",
+      },
+      {
+        name: "Expo",
+        color: "bg-pink-500/10 text-gray-300 border border-gray-500/20",
+      },
+      {
+        name: "TypeScript",
+        color: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
+      },
+      {
+        name: "Expo Router",
+        color: "bg-purple-500/10 text-purple-400 border border-purple-500/20",
+      },
+      {
+        name: "React Native Reanimated",
+        color: "bg-red-500/10 text-red-400 border border-red-500/20",
+      },
+      {
+        name: "SQLite",
+        color: "bg-sky-500/10 text-sky-400 border border-sky-500/20",
+      },
+      {
+        name: "Amiri Font",
+        color:
+          "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
+      },
+      {
+        name: "Responsive Mobile UI",
+        color: "bg-orange-500/10 text-orange-400 border border-orange-500/20",
+      },
+    ],
+    docs: {
+      problem:
+        "I wanted a simple and distraction-free way to read the Quran on my phone. Existing apps can sometimes feel overwhelming with too many features and UI elements, so I wanted to build something focused primarily on reading and continuing my personal Quran reading routine.",
+
+      goal: "To build a personal Quran reading app with simple navigation, comfortable Arabic text, and a bookmark feature that makes it easy to save and continue reading from where I left off.",
+
+      solution:
+        "I built a lightweight mobile app using React Native and Expo, focusing on a clean and minimal reading experience. The app uses Expo Router for navigation, the Amiri font for Arabic Quran text, and local data storage for features such as bookmarks, allowing the app to remain fast and usable without relying heavily on a backend.",
+
+      screenshots: [
+        {
+          image: "/screenshoot/quran/list.jpeg",
+          title: "Surah List",
+          description:
+            "The main screen displays a list of Surahs, making it easy to find and select the chapter I want to read.",
+        },
+        {
+          image: "/screenshoot/quran/reader.jpeg",
+          title: "Quran Reader",
+          description:
+            "The reading screen presents Quran verses with Arabic typography designed to provide a comfortable and focused reading experience on mobile devices.",
+        },
+      ],
+
+      challenges: [
+        "Designing Arabic text layouts that remain comfortable to read across different mobile screen sizes.",
+        "Integrating and configuring an Arabic font that provides a suitable Quran reading experience.",
+        "Managing bookmark state so saved verses remain accessible when navigating between screens.",
+        "Building a clean file-based navigation structure using Expo Router.",
+      ],
+
+      result:
+        "The project resulted in a lightweight personal Quran reading app with simple navigation, a focused reading interface, and a practical bookmark feature. More importantly, it gave me hands-on experience building a complete React Native application around a real personal use case.",
+    },
+    liveUrl: "",
+    githubUrl: "https://github.com/ilhamganteng321/react-native-quran-",
+  },
+  {
     icon: "fas fa-store",
     iconGradient: "from-orange-500 to-red-600",
     title: "Neermala Affiliate Store",
     type: "web",
     photoUrl: "/images/e-shop.png",
     description:
-        "Modern affiliate ecommerce web application built with Next.js and Tailwind CSS, featuring dynamic product management using Google Sheets API, responsive shopping cart system, animated product carousel, realtime cart updates with localStorage, and clean minimalist shopping experience inspired by modern ecommerce platforms.",
+      "Modern affiliate ecommerce web application built with Next.js and Tailwind CSS, featuring dynamic product management using Google Sheets API, responsive shopping cart system, animated product carousel, realtime cart updates with localStorage, and clean minimalist shopping experience inspired by modern ecommerce platforms.",
     tags: [
-        {
-            name: "Next.js",
-            color: "bg-black/10 text-black border border-black/20",
-        },
-        {
-            name: "TypeScript",
-            color: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
-        },
-        {
-            name: "Tailwind CSS",
-            color: "bg-sky-500/10 text-sky-400 border border-sky-500/20",
-        },
-        {
-            name: "Google Sheets API",
-            color: "bg-green-500/10 text-green-400 border border-green-500/20",
-        },
-        {
-            name: "Shopee Affiliate",
-            color: "bg-orange-500/10 text-orange-400 border border-orange-500/20",
-        },
-        {
-            name: "Responsive UI",
-            color: "bg-purple-500/10 text-purple-400 border border-purple-500/20",
-        },
+      {
+        name: "Next.js",
+        color: "bg-gray-500/10 text-blue-500 border border-red-500/20",
+      },
+      {
+        name: "TypeScript",
+        color: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "bg-sky-500/10 text-sky-400 border border-sky-500/20",
+      },
+      {
+        name: "Google Sheets API",
+        color: "bg-green-500/10 text-green-400 border border-green-500/20",
+      },
+      {
+        name: "Shopee Affiliate",
+        color: "bg-orange-500/10 text-orange-400 border border-orange-500/20",
+      },
+      {
+        name: "Responsive UI",
+        color: "bg-purple-500/10 text-purple-400 border border-purple-500/20",
+      },
     ],
     liveUrl: "https://e-shop.ngacir.my.id",
     githubUrl: "https://github.com/ilhamganteng321/e-shop",
-},
+  },
   {
     icon: "fas fa-cash-register",
     iconGradient: "from-blue-500 to-indigo-700",

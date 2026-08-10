@@ -51,7 +51,7 @@ const About: React.FC = () => {
         <RevealOnScroll>
           <div className="mb-10 sm:mb-12 md:mb-16">
             <p className="mb-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-indigo-400">
-              About / Expertise
+              02 // About / Expertise
             </p>
 
             <h2 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[0.95] tracking-tight text-white">

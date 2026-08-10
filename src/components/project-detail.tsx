@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectDocs from "./project-docs";
 
 export interface ProjectDetailData {
   title: string;
@@ -18,6 +19,20 @@ export interface ProjectDetailData {
   githubUrl: string | null;
 
   features?: string[];
+  docs?: {
+    problem?: string;
+    goal?: string;
+    solution?: string;
+
+    screenshots?: {
+      image: string;
+      title?: string;
+      description?: string;
+    }[];
+
+    challenges?: string[];
+    result?: string;
+  };
 }
 
 interface ProjectDetailProps {
@@ -37,7 +52,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
             onClick={onBack}
             className="transition-colors hover:text-indigo-400"
           >
-            Projects
+            Persona
           </button>
 
           <i className="ph ph-caret-right text-sm" />
@@ -55,7 +70,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
               <img
                 src={project.photoUrl}
                 alt={project.title}
-                className="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
+                className="h-full w-full object-contain opacity-80 transition-opacity duration-500 group-hover:opacity-100"
               />
             ) : (
               <div
@@ -174,6 +189,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
                 </ul>
               </section>
             )}
+
+            {/* Documentation */}
+            {project.docs && <ProjectDocs docs={project.docs} />}
           </div>
 
           {/* =====================================

@@ -64,6 +64,9 @@ const Contact: React.FC = () => {
       <div className="max-w-5xl mx-auto w-full px-6 relative z-10">
         <div className="text-center mb-16">
           <RevealOnScroll>
+            <p className="font-mono text-indigo-500 tracking-widest text-sm uppercase mb-4">
+              04 // Signal
+            </p>
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-white/10 mb-6 relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full blur-xl opacity-20 group-hover:opacity-50 transition-opacity"></div>
               <i className="ph ph-paper-plane-tilt text-2xl text-white"></i>
